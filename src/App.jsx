@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Link,
-  HashRouter,
-} from "react-router-dom";
+import { HashRouter as Router, Route, Switch, Link } from "react-router-dom";
 import pic from "./images/image-jeremy.png";
 import data from "./data";
 import Task from "./components/Tasks";
@@ -16,7 +10,7 @@ const App = () => {
   const weekly = "weekly";
   const monthly = "monthly";
   return (
-    <HashRouter>
+    <Router>
       <div className="container">
         <section className="person">
           <div className="profile">
@@ -48,7 +42,7 @@ const App = () => {
           </Route>
         </Switch>
       </div>
-    </HashRouter>
+    </Router>
   );
 };
 
