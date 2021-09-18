@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+
+  --work: hsl(15, 100%, 70%);
+  --play: hsl(195, 74%, 62%);
+  --study: hsl(348, 100%, 68%);
+  --exercise: hsl(145, 58%, 55%);
+  --social: hsl(264, 64%, 52%);
+  --self-care: hsl(43, 84%, 65%);
+
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+
+  --radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+}
+#app {
+  width: 100%;
+}
+.container {
+  width: 90%;
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.person {
+  background-color: var(--Dark-blue);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  background-color: var(--Blue);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  border-radius: inherit;
+}
+
+.profile-pic {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: inline-block;
+  border: 3px solid #fff;
+  margin-right: 1.5rem;
+}
+
+.profile-details {
+}
+.dude,
+.name {
+  font-weight: 400;
+  color: #fff;
+}
+.dude {
+  margin-bottom: 0.325rem;
+  color: var(--Pale-Blue);
+}
+.name {
+  font-size: 1.25rem;
+}
+
+.detail {
+  padding: 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  border-radius: inherit;
+}
+.detail a {
+  color: var(--Pale-Blue);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.detail a:hover {
+  color: #fff;
+}
+
+.task-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+}
+.task-container:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.task-1 {
+  background: var(--work) url(./images/icon-work.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.task-2 {
+  background: var(--play) url(./images/icon-play.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.task-3 {
+  background: var(--study) url(./images/icon-study.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.task-4 {
+  background: var(--exercise) url(./images/icon-exercise.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.task-5 {
+  background: var(--social) url(./images/icon-social.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+.task-6 {
+  background: var(--self-care) url(./images/icon-self-care.svg) no-repeat;
+  background-position: top -0.5rem right 1rem;
+}
+
+.task {
+  background-color: var(--Dark-blue);
+  border-radius: inherit;
+  padding: 2rem;
+  color: #fff;
+}
+.task-container:hover .task {
+  background-color: hsla(240, 39%, 20%, 0.95);
+}
+.task-color {
+  height: 2.5rem;
+}
+.task-header,
+.task-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.task-header {
+  margin-bottom: 1rem;
+}
+.task-header h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.task-body h2 {
+  font-weight: 400;
+  font-size: 1.5;
+}
+.last {
+  color: var(--Pale-Blue);
+}
+
+@media (max-width: 350px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    display: flex;
+    align-items: center;
+  }
+  .container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .person {
+    background-color: var(--Dark-blue);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 0;
+    grid-row: 1 / 3;
+    display: flex;
+    flex-direction: column;
+  }
+  .profile,
+  .task-body,
+  .detail {
+    flex-direction: column;
+    align-items: start;
+  }
+  .profile {
+    padding-bottom: 3.75rem;
+  }
+  .detail {
+    padding: 1.5rem 1.75rem;
+    flex: 1;
+  }
+  .name {
+    font-size: 2.5rem;
+  }
+  .profile-pic {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+  .task-container:not(:last-child) {
+    margin-bottom: 0;
+  }
+  .task-body h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .last {
+    font-size: 0.85rem;
+  }
+}
