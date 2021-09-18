@@ -84,7 +84,7 @@ body {
   justify-content: space-between;
   border-radius: inherit;
 }
-.detail a {
+.link {
   color: var(--Pale-Blue);
   text-decoration: none;
   font-size: 1.2rem;
@@ -221,4 +221,9 @@ body {
   .last {
     font-size: 0.85rem;
   }
+}
+
+.link.isActive {
+  color: #fff;
+  letter-spacing: 2px;
 }

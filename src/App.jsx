@@ -5,10 +5,6 @@ import data from "./data";
 import Task from "./components/Tasks";
 
 const App = () => {
-  console.log(data);
-  const daily = "daily";
-  const weekly = "weekly";
-  const monthly = "monthly";
   return (
     <Router>
       <div className="container">
@@ -24,21 +20,27 @@ const App = () => {
           </div>
 
           <div className="detail">
-            <Link to="./">Daily</Link>
-            <Link to="./weekly">Weekly</Link>
-            <Link to="./monthly">Monthly</Link>
+            <Link className="link" to="./">
+              Daily
+            </Link>
+            <Link className="link" to="./weekly">
+              Weekly
+            </Link>
+            <Link className="link" to="./monthly">
+              Monthly
+            </Link>
           </div>
         </section>
 
         <Switch>
           <Route path="/" exact>
-            <Task data={data} time={daily} last="Day" />
+            <Task data={data} time="daily" last="Day" />
           </Route>
           <Route path="/weekly" exact>
-            <Task data={data} time={weekly} last="Week" />
+            <Task data={data} time="weekly" last="Week" />
           </Route>
           <Route path="/monthly" exact>
-            <Task data={data} time={monthly} last="Month" />
+            <Task data={data} time="monthly" last="Month" />
           </Route>
         </Switch>
       </div>
